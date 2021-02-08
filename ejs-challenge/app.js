@@ -42,7 +42,16 @@ app.get("/contact",function(req,res){
     });
 
 })
+app.post("/compose", function(req,res){
 
+    var posted ={
+      title:req.body.TitleItem,
+      compose:req.body.ComposeItem
+    }
+    console.log(posted.title);
+    console.log(posted.compose);
+
+})
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
