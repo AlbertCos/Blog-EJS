@@ -6,7 +6,7 @@
 <% for(var i = 0; i<newpost.length ;i++){ %>
   <div>
   <h1><%= newpost[i].title %></h1>
-  <p> <%= newpost[i].compose %></p>
+  <p> <%= newpost[i].compose.substring(0,99)%> ... <a href="/post/<%=newpost[i].title%>" > Read More</a> </p>
   </div>
 <% } %>
 
