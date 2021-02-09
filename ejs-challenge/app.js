@@ -53,7 +53,10 @@ app.get("/post/:daily", function(req,res){
 
   for (var i=0; i<posts.length;i++){
     if(lodash.kebabCase(lodash.lowerCase(req.params.daily))===lodash.kebabCase(lodash.lowerCase(posts[i].title))){
-      console.log("matched!")
+      res.render("post",{
+        Titlepost:posts[i].title,
+        Bodypost:posts[i].compose
+      })
     }
   }
   });
